@@ -8,4 +8,6 @@ def process(file_path):
         with open('txt_QuizSource/pdf_text.txt', 'a', encoding='utf-8') as txt_file:
             txt_file.write(text)
         print(f"文字提取完成，已保存到 pdf_text.txt")
-        return text
+        generated = []
+        generated.append('txt_QuizSource/pdf_text.txt')
+        return generated

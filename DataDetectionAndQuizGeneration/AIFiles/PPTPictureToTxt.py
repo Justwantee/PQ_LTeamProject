@@ -20,6 +20,10 @@ def process(file_path):
                 f.write(text)
     else:
         print("未识别到文字")
+    generated = []
+    generated.append('txt_QuizSource/ppt_text.txt')
+    return generated
+
 
 def ocr_image(image_path, lang='ch_sim'):
     """
@@ -37,7 +41,7 @@ def ocr_image(image_path, lang='ch_sim'):
     return results
 
 # 示例用法
-image_path = "videoPicture/frame_0015.jpg"  # 替换为你的图片路径
+image_path = ""  # 替换为你的图片路径
 recognized_text = ocr_image(image_path, lang='ch_sim')  # 使用简体中文模型
 
 if recognized_text:

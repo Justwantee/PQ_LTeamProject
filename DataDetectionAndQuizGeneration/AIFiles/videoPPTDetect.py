@@ -112,7 +112,10 @@ def process(file_path):
  output_folder = "inputFiles"  # 替换为保存帧的文件夹路径
  frame_interval = 30  # 每30帧抽取一次
  extract_frames(video_path, output_folder, frame_interval)
+ generated = []
+ generated.append('inputFiles')
+ return generated
 # 示例用法
-folder_path = "videoPicture"  # 替换为你的图片文件夹路径
+folder_path = "testFiles"  # 替换为你的图片文件夹路径
 image_paths = [os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.lower().endswith(('.png', '.jpg', '.jpeg'))]
-remove_duplicate_images(image_paths, threshold=0.9)#调阈值，越高判定越严格，越不会轻易删图
+remove_duplicate_images(image_paths, threshold=0.8)#调阈值，越高判定越严格，越不会轻易删图
